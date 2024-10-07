@@ -3,9 +3,9 @@
 A command line tool that converts magnet links into .torrent files.
 
 ## Requirements
-* python2.7/3.5
-* python-libtorrent (libtorrent-rasterbar version 0.16 or later) for python 2.7 or
-  python3-libtorrent for python 3.5
+This fork has only been tested with:
+* python3 3.11.8
+* python3-libtorrent (libtorrent-rasterbar version 2.0.10)
 
 ### Install libtorrent-python on Mac
 
