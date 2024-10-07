@@ -54,14 +54,9 @@ class Magnet2Torrent(object):
         self.tempdir = tempfile.mkdtemp()
         self.ses = lt.session()
 
-        params = {
-            'url': magnet,
-            'save_path': self.tempdir,
-            'storage_mode': lt.storage_mode_t(2),
-            'paused': False,
-            'auto_managed': True,
-            'duplicate_is_error': False
-        }
+        params = lt.parse_magnet_uri(magnet)
+        params.save_path = self.tempdir
+        
         self.handle = self.ses.add_torrent(params)
 
     def run(self):
